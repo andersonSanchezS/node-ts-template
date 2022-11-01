@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { createUser, getAllUsers, findById } from './test.service'
+import { createUser, getAllUsers, findById } from './user.service'
 const router = Router()
 
 // Main endpoint
