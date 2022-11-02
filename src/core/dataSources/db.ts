@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // Sequelize
 import { Sequelize } from 'sequelize'
 import { Sequelize as TSequelize } from 'sequelize/types'

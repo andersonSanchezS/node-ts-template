@@ -20,20 +20,6 @@ import router from '@rest/index'
 import ErrorHandler from '@utils/ErrorHandler'
 import HttpException from '@errors/HttpException'
 
-import sequelize from '@dataSources/db'
-
-// Database Connection
-(async () => {
-    try {
-        const db = sequelize()
-        await db.authenticate()
-        await db.sync()
-        console.log('Connection has been established successfully.')
-    } catch (error) {
-        console.error('Unable to connect to the database:', error)
-    }
-
-})()
 
 // Express middleware
 const app = express()

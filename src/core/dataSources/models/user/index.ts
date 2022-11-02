@@ -28,23 +28,11 @@ const UserModel = db.define<IUserModel>('user', {
     },
     uFirstName: {
         type: Sequelize.STRING(50),
-        allowNull: false,
-        validate: {
-            len: [0, 50],
-            is: /^[a-zA-Z0-9_ ]*$/i,
-            notEmpty: {
-                msg: 'el nombre no puede estar vacío'
-            }
-        }
+        allowNull: false
     },
     uLastName: {
         type: Sequelize.STRING(50),
-        allowNull: false,
-        validate: {
-            len: [0, 50],
-            is: /^[a-zA-Z0-9_ ]*$/i,
-            notEmpty: true
-        }
+        allowNull: false
     },
     uEmail: {
         type: Sequelize.STRING(50),
@@ -57,12 +45,7 @@ const UserModel = db.define<IUserModel>('user', {
     uUserName: {
         type: Sequelize.STRING(50),
         allowNull: false,
-        unique: true,
-        validate: {
-            len: [0, 50],
-            is: /^[a-zA-Z0-9_ ]*$/i,
-            notEmpty: true
-        }
+        unique: true
     },
     uPassword: {
         type: Sequelize.STRING(50),
